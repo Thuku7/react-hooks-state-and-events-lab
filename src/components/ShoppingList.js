@@ -2,10 +2,17 @@ import React from "react";
 import Item from "./Item";
 
 function ShoppingList({ items }) {
+
+  
+
+  
+  
+
+
   return (
     <div className="ShoppingList">
       <div className="Filter">
-        <select name="filter">
+        <select name="filter" onChange={handleSelectedCategory}>
           <option value="All">Filter by category</option>
           <option value="Produce">Produce</option>
           <option value="Dairy">Dairy</option>
