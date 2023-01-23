@@ -5,14 +5,15 @@ function ShoppingList({ items }) {
   
   
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [shoppingItem, setShoppingItem] = useState(items)
   
 
 
-  function handleSelectedCategory(category) {
-    setSelectedCategory(category);
+  function handleSelectedCategory(event) {
+    setSelectedCategory(event.target.value);
   }
 
-  const itemsToDisplay = items.filter((item) => {
+  const itemsToDisplay = shoppingItem.filter((item) => {
     if (selectedCategory === "All") return true;
 
     return item.category === selectedCategory;
